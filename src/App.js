@@ -1,26 +1,34 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DialogContainer from './Dialog/DialogContainer';
+
+const PageContent = () => (
+  <div>
+    <h1>Overlay This!</h1>
+    <label>Name: </label>
+    <input type='text' autoFocus />
+    <button>Submit</button>
+  </div>
+);
+
+const DialogContent = () => (
+  <div>
+    <h1>Join Us!</h1>
+    <label>Email: </label>
+    <input type='text'/>
+    <button>Submit</button>
+  </div>
+);
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
+        <DialogContainer
+        content={<PageContent/>}
+        visualOverlay={<div className='void'/>}
+        dialogContent={<DialogContent/>}/>
       </div>
     );
   }
