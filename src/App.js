@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import './App.css';
-import DialogContainer from './Dialog/DialogContainer';
+import MaorModal from 'maor-modal';
 
 const PageContent = () => (
   <div>
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <DialogContainer
+        <MaorModal
         content={<PageContent/>}
         visualOverlay={<div className='void'/>}
         dialogContent={<DialogContent/>}/>

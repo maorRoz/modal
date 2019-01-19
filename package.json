@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "maor-modal": "^1.0.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-focus-lock": "^1.17.6",
